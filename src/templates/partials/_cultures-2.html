@@ -1,0 +1,102 @@
+<!-- begin hero -->
+<section class="hero" style="background-image: url('img/bg-cultures-2.jpg');">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <!-- begin form -->
+        <div class="form__wrap form--rom-sm__wrap">
+          <div class="form form--romb-sm">
+            <div class="form__title">
+              <h2 class="h2">Вітаємо!</h2>
+              <div class="subttl">авторизуйтесь для початку роботи </div>
+            </div>
+
+            <form>
+              <div class="form__field">
+                {{ mixins.input(
+                  placeholder = 'ПІБ',
+                  inputIcon = 'user'
+                ) }}
+              </div>
+
+              <div class="form__field">
+                {{ mixins.input(
+                  type = 'tel',
+                  placeholder = 'Телефон',
+                  inputIcon = 'call'
+                ) }}
+              </div>
+
+              <div class="form__field">
+                {{ mixins.input(
+                  type = 'email',
+                  placeholder = 'E-mail',
+                  inputIcon = 'envelope'
+                ) }}
+              </div>
+
+              <div class="form__field">
+                <!-- begin select -->
+                <div class="select">
+                  <select class="js-select has-placeholder" data-type="default">
+                    <option value="placeholder">Оберіть область</option>
+                    <option value="область1">область1</option>
+                    <option value="область2">область2</option>
+                    <option value="область3">область3</option>
+                  </select>                  
+                </div>
+                <!-- end select -->
+              </div>
+
+              <div class="form__field">
+                <!-- begin select -->
+                <div class="select">
+                  <select class="js-select has-placeholder" data-type="default">
+                    <option value="placeholder">Оберіть район</option>
+                    <option value="район1">район1</option>
+                    <option value="район2">район2</option>
+                    <option value="район3">район3</option>
+                  </select>                  
+                </div>
+                <!-- end select -->
+              </div>
+
+              <div class="form__field">
+                {{ mixins.input(
+                  type = 'password',
+                  placeholder = 'Пароль',
+                  inputIcon = 'lock'
+                ) }}
+              </div>
+
+              <div class="form__field">
+                {{ mixins.input(
+                  type = 'password',
+                  placeholder = 'Повторіть пароль',
+                  inputIcon = 'lock'
+                ) }}
+              </div>
+
+              <div class="form__btns">
+                <div class="form_link">
+                  <a href="#" class="link">У мене вже є аккаунт</a>
+                </div>
+                <span>Або</span>
+                <div class="form__btn">
+                  <button class="btn">Зареєструватись</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form__romb-sm form--romb-sm__romb-sm" style="background-image: url('img/romb-4.png');"></div>
+        </div>
+        <!-- end form -->
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-man hero-man--sm" style="background-image: url('img/man-2.png');"></div>
+</section>
+<!-- end hero -->

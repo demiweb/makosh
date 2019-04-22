@@ -1,1 +1,35 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="header__logo">
+          <!-- begin logo -->
+          <a href="/" class="logo">
+            <img src="img/logo.png" width="127" height="127" alt="">
+          </a>
+          <!-- end logo -->          
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="header__center">
+          <div class="header__title">Минеральные удобрения МАКОШ</div>
+          <div class="header__subttl">Сотрудничество с нами - гарантия вашего урожая!</div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="header__contacts">
+          <div class="header__contact">
+            <a href="tel:+380674315705" class="header__phone">+38 067 <strong>431 57 05</strong></a>
+          </div>
+          <div class="header__contact">
+            <a href="mailto:marketolog@makosh-group.com.ua" class="header__mail"><span>{{ mixins.icon('mail') }}</span>marketolog@makosh-group.com.ua</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->

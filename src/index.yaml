@@ -1,4 +1,5 @@
-ProjectTitle: template
+ProjectTitle: makosh
 
 PageList:
-- file: page.html
+- file: cultures-1.html
+- file: cultures-2.html

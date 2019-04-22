@@ -1,0 +1,51 @@
+<!-- begin hero -->
+<section class="hero" style="background-image: url('img/bg-cultures-1.jpg');">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- begin form -->
+        <div class="form__wrap form--romb__wrap">
+          <div class="form form--romb">
+            <div class="form__title">
+              <h2 class="h2">Вітаємо!</h2>
+              <div class="subttl">авторизуйтесь для початку роботи </div>
+            </div>
+
+            <form>
+              <div class="form__field">
+                {{ mixins.input(
+                  type = 'email',
+                  placeholder = 'E-mail',
+                  inputIcon = 'user'
+                ) }}
+              </div>
+
+              <div class="form__field">
+                {{ mixins.input(
+                  type = 'password',
+                  placeholder = 'Пароль',
+                  inputIcon = 'lock'
+                ) }}
+              </div>
+
+              <div class="form__btns">
+                <div class="form__btn">
+                  <button class="btn">Увійти</button>
+                </div>
+                <span>Або</span>
+                <div class="form__btn">
+                  <button class="btn">Зареєструватись</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end form -->
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-man" style="background-image: url('img/man-1.png');"></div>
+</section>
+<!-- end hero -->

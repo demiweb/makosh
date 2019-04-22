@@ -1,13 +1,41 @@
-// +font('roboto-regular', 'roboto-regular-webfont')
++font('proximanova-regular', 'proximanova-regular-webfont')
++font('proximanova-light', 'proximanova-light-webfont')
++font('proximanova-bold', 'proximanova-bold-webfont')
++font('proximanova-semibold', 'proximanova-semibold-webfont')
 
-// =reg
-//   font-family: 'roboto-regular', Arial, sans-serif
+=reg
+  font-family: 'proximanova-regular', Arial, sans-serif
+=light
+  font-family: 'proximanova-light', Arial, sans-serif
+=bold
+  font-family: 'proximanova-bold', Arial, sans-serif
+=semi
+  font-family: 'proximanova-semibold', Arial, sans-serif
 
 
 body
   background: #FFF
   line-height: 1.4
   font-size: 16px
-  // +reg
-  // color: $c-text
+  +reg
+  color: $c-text
   +no-scroll
+
+.out
+  overflow-x: hidden
+  
+.btn
+  display: inline-block
+  background-color: $c-accent
+  color: #fff
+  font-size: 16px
+  min-width: 229px
+  border-radius: 13px
+  text-align: center
+  padding: 11px 10px
+
+.link
+  +reg
+  font-size: 14px
+  color: #7ba0fd
+  text-decoration: underline

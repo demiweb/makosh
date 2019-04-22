@@ -1,3 +1,12 @@
 {% macro icon(i) %}
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
+
+{% macro input(mod, type = 'text', placeholder, inputIcon) %}
+<!-- begin input -->
+<div class="input {{ mod }}">
+  <input type="{{ type }}" placeholder="{{ placeholder }}">
+  {{ icon(inputIcon) }}
+</div>
+<!-- end input -->
+{% endmacro %}
