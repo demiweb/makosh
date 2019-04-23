@@ -1,0 +1,40 @@
+.farmer-tabs
+  margin-top: -50px
+  &__tabs
+    padding-left: 147px
+  &__tab
+    display: inline-block
+    vertical-align: top
+    font-size: 16px
+    +light
+    text-transform: uppercase
+    padding: 14px 20px
+    color: #fff
+    background-color: $c-text
+    &.is-active
+      background-color: #fff
+      color: #000
+  &__content
+    padding-top: 20px
+
+.farmer-meta
+  &__title
+    margin-bottom: 20px
+  &__form-top
+    display: flex
+    justify-content: space-between
+    padding-bottom: 30px
+    border-bottom: 1px solid  $c-gray
+    margin-bottom: 25px
+    .select, .input
+      flex-grow: 1
+      &:not(:last-child)
+        margin-right: 12px
+
+.farmer-inputs
+  font-size: 0
+  margin-bottom: 30px
+  .input
+    // display: inline-block
+    vertical-align: top
+    width: 50%

@@ -6,7 +6,21 @@
 <!-- begin input -->
 <div class="input {{ mod }}">
   <input type="{{ type }}" placeholder="{{ placeholder }}">
-  {{ icon(inputIcon) }}
+  {% if inputIcon %}{{ icon(inputIcon) }}{% endif %}
+  
 </div>
 <!-- end input -->
+{% endmacro %}
+
+{% macro select(mod, type = 'with_input', placeholder, options) %}
+<!-- begin select -->
+<div class="select {{ mod }}">
+  <select class="js-select has-placeholder" data-type="{{ type }}">
+    <option value="placeholder">{{ placeholder }}</option>
+    {% for i in options %}
+    <option value="{{ i.option }}">{{ i.option }}</option>
+    {% endfor %}
+  </select>
+</div>
+<!-- end select -->
 {% endmacro %}

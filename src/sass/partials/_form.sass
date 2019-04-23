@@ -4,8 +4,16 @@
   background-color: #fff
   text-align: left
   padding: 45px
+  +xs
+    max-width: none
+    padding: 20px
   &__wrap
     // text-align: center
+    +xs
+      margin-left: -15px
+      margin-right: -15px
+      padding-left: 15px
+      padding-right: 15px
   &__title
     margin-bottom: 20px
   &__field
@@ -20,23 +28,34 @@
   &--romb
     margin-left: auto
     margin-right: auto
-    .form__wrap
     &__wrap
       background-image: url('../img/romb.png')
       +cover
       background-size: contain
       padding: 125px 0px
+      +xs
+        padding: 90px 15px
+        background-size: 500px 500px
+      +r(500)
+        padding: 30px 15px
+        background-size: 360px 360px
   &--romb-sm
+    &__wrap
+      +xs
+        padding-left: 0
+        padding-right: 0
+        margin-left: 0
+        margin-right: 0
     &__romb-sm
       z-index: -1
       position: absolute
-      top: -200px
+      top: 0
       left: 50%
-      transform: translate(-50%, 0)
+      transform: translate(-50%, -50%)
       +cover
       background-size: contain
-      width: 100%
-      height: 50%
+      width: 135px
+      height: 149px
 
 .input
   position: relative
@@ -47,9 +66,13 @@
     padding: 5px 15px
     color: $c-text
     width: 100%
+    font-size: 16px
     +placeholder
       font-family: inherit
-      color: $c-gray
+      color: $c-text
+  label
+    +light
+    font-size: 16px
   .icon
     position: absolute
     top: 50%
@@ -57,6 +80,18 @@
     right: 15px
     fill: $c-gray
 
+  &--mod
+    input
+      +placeholder
+        color: $c-gray
+  &--with-label
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    label
+      width: 90px
+
+      
 .select
   position: relative
   select
@@ -69,7 +104,23 @@
     position: absolute
     top: 13px
     right: 17px
-    +icon-arrow(10, 10, 1, $c-gray, -45)
+    +icon-arrow(10, 10, 1, currentColor, -45)
+
+  &--mod
+    .custom-select
+      &.has-placeholder
+      .custom-select
+        &__opener
+          color: $c-gray
+        &__option
+          &[data-value="placeholder"]
+            display: none
+    &.has-placeholder-hidden
+      .custom-select
+        &__opener
+          color: $c-text
+    &::before
+      +icon-arrow(10, 10, 1, $c-gray, -45)
     
   .custom-select
     user-select: none
@@ -80,15 +131,15 @@
           opacity: 1
     &.has-placeholder
       .custom-select
-        &__opener
-          color: $c-gray
+        // &__opener
+        //   color: $c-gray
         &__option
-          &:first-child
+          &[data-value="placeholder"]
             display: none
-    &.has-placeholder-hidden
-      .custom-select
-        &__opener
-          color: $c-text
+    // &.has-placeholder-hidden
+    //   .custom-select
+    //     &__opener
+    //       color: $c-text
 
     &__opener
       height: 41px
@@ -108,6 +159,8 @@
       top: 100%
       opacity: 0
       visibility: hidden
+      overflow: auto
+      max-height: 300px
     &__option
       cursor: pointer
       padding: 5px 10px
@@ -115,5 +168,25 @@
       +hover
         color: $c-accent
         background-color: $c-gray
-
+    &__panel-item
+      padding-left: 10px
+      padding-right: 10px
+      margin-bottom: 5px
+      position: relative
+      overflow: hidden
+      input
+        border: 1px solid  $c-gray
+        height: 30px
+        width: 100%
+        padding: 5px
+        padding-left: 25px
+        font-family: inherit
+      .icon
+        fill: $c-gray
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        left: 15px
+        font-size: 16px
+        pointer-events: none
     

@@ -1,33 +1,80 @@
 .header
+  $this: &
   background-color: #fff
   height: 80px
   text-align: center
   padding-top: 10px
   position: relative
   z-index: 10
+  +xl
+    padding-top: 14px
+  +lg
+    height: auto
+    padding-bottom: 14px
+    .col-xl-2
+      position: static
+    .container
+      position: relative
+      padding-left: 127px // logo width
+  +xs
+    .container
+      padding-left: 80px
   &__logo
     margin-top: -10px
+    +xl
+      margin-top: -14px
+    +lg
+      position: absolute
+      top: 0
+      left: 0
+    +xs
+      img
+        width: 80px
+        height: 80px
   &__title
     text-transform: uppercase
     font-size: 21px
     +light
+    +xl
+      font-size: 18px
+    +xs
+      display: none
   &__subttl
     +semi
     color: $c-accent
     text-transform: uppercase
     font-size: 21px
+    +xl
+      font-size: 18px
+    +xs
+      display: none
   &__phone
     color: #000
     font-size: 21px
     +light
+    +xl
+      font-size: 18px
+    +xs
+      font-size: 16px
     strong
       +bold
   &__mail
     font-size: 21px
     color: #000
     +light
+    +xl
+      font-size: 18px
+    +xs
+      font-size: 16px
+      display: inline-block
     .icon
       font-size: 24px
+      +xl
+        font-size: 21px
+      +xs
+        font-size: 18px
+        position: relative
+        top: 5px
   &__mail
     display: inline-flex
     align-items: center
@@ -36,3 +83,32 @@
       display: inline-block
       font-size: 0
       margin-right: 10px
+
+  &--cabinet
+    padding: 0
+    height: auto
+    +xl
+      padding: 0
+    #{$this}__logo
+      width: 127px
+      margin-top: 0
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+    #{$this}__inner
+      display: flex
+      align-items: center
+      justify-content: space-between
+      position: relative
+      padding-left: 127px
+      height: 87px
+    #{$this}__title
+      font-size: 30px
+      color: $c-accent
+      +bold
+      padding-left: 20px
+
+.logo
+  display: block
+  font-size: 0

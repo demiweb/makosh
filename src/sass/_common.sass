@@ -12,6 +12,22 @@
 =semi
   font-family: 'proximanova-semibold', Arial, sans-serif
 
+=xl
+  +r(1499)
+    @content
+=lg
+  +r(1199)
+    @content
+=md
+  +r(991)
+    @content
+=sm
+  +r(767)
+    @content
+=xs
+  +r(575)
+    @content
+
 
 body
   background: #FFF
@@ -23,16 +39,30 @@ body
 
 .out
   overflow-x: hidden
+
+.layout
+  padding-top: 62px
+  &__inner
+    background-color: #fff
+
   
 .btn
-  display: inline-block
+  display: inline-flex
+  align-items: center
+  justify-content: center
   background-color: $c-accent
   color: #fff
   font-size: 16px
   min-width: 229px
   border-radius: 13px
   text-align: center
-  padding: 11px 10px
+  padding: 11px 30px
+  .icon
+    fill: currentColor
+    font-size: 24px
+    margin-left: 10px
+  &--full
+    min-width: 0
 
 .link
   +reg

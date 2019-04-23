@@ -63,6 +63,7 @@
     "require-yaml": "^0.0.1",
     "run-sequence": "^2.2.1",
     "svg-use-it": "^1.1.6",
+    "throttle-debounce": "^2.1.0",
     "through2": "^2.0.1",
     "vinyl-buffer": "^1.0.0",
     "webpack": "^4.6.0",
