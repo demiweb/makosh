@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>cabinet-farmer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <header class="header header--cabinet">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__logo">
+              <!-- begin logo -->
+              <a href="/" class="logo">
+                <img src="img/logo.png" width="127" height="127" alt="">
+              </a>
+              <!-- end logo -->
+            </div>
+            <div class="header__title">Вітаємо, Олександр Юріевич!</div>
+            <div class="header__btn">
+              <a href="#" class="btn btn--full"> Вихід <svg class="icon icon-sign-out">
+                  <use xlink:href="img/sprite.svg#icon-sign-out"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin layout -->
+      <section class="layout" style="background-image: url('img/bg-farmer.jpg');">
+        <div class="layout__inner">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <!-- begin farmer-tabs -->
+                <div class="farmer-tabs js-tabs">
+                  <div class="farmer-tabs__tabs">
+                    <a href="#" class="farmer-tabs__tab js-tab is-active" data-target-tab="audit">Дані аудиту грунту</a>
+                    <a href="#" class="farmer-tabs__tab js-tab" data-target-tab="recomendations">Рекомендації по внесенню добрив</a>
+                  </div>
+                  <div class="farmer-tabs__content">
+                    <!-- begin farmer-meta -->
+                    <div class="farmer-meta">
+                      <div class="farmer-meta__title">
+                        <h3 class="h3">Ваші дані по полю</h3>
+                      </div>
+                      <div class="farmer-meta__form">
+                        <form>
+                          <div class="farmer-meta__form-top">
+                            <!-- begin select -->
+                            <div class="select ">
+                              <select class="js-select has-placeholder" data-type="with_input">
+                                <option value="placeholder">Оберіть культуру</option>
+                                <option value="культура1">культура1</option>
+                                <option value="культура2">культура2</option>
+                                <option value="культура3">культура3</option>
+                              </select>
+                            </div>
+                            <!-- end select -->
+                            <!-- begin input -->
+                            <div class="input ">
+                              <input type="text" placeholder="Введіть планову врожайність (т/га) :">
+                            </div>
+                            <!-- end input -->
+                            <!-- begin input -->
+                            <div class="input ">
+                              <input type="text" placeholder="Введіть площу поля (га) :">
+                            </div>
+                            <!-- end input -->
+                          </div>
+                          <div class="farmer-meta__form-bottom">
+                            <div class="farmer-meta__title">
+                              <h3 class="h3">введіть показники аналізу грунту, мг/100 гр грунту</h3>
+                            </div>
+                            <!-- begin farmer-inputs -->
+                            <div class="farmer-inputs">
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>N</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>P205</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>K2O</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>Ca</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>S</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>Mg</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>B</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>Zn</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>Cu</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                              <!-- begin input -->
+                              <div class="input input--with-label">
+                                <label>Mn</label>
+                                <input type="text">
+                              </div>
+                              <!-- end input -->
+                            </div>
+                            <!-- end farmer-inputs -->
+                            <div class="farmer-meta__btn">
+                              <button class="btn">Зберегти дані</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <!-- end farmer-meta -->
+                  </div>
+                </div>
+                <!-- end farmer-tabs -->
+              </div>
+              <div class="col-lg-4">
+                <!-- begin banner -->
+                <div class="banner">
+                  <div class="banner__text">Більше інформації про добрива, схему живлення та аналіз ґрунту, дізнавайтесь у Вашого регіонального менеджера</div>
+                  <div class="banner__img" style="background-image: url('img/banner-img.jpg');"></div>
+                  <div class="banner__name">Поліщук Валерій</div>
+                  <a href="tel:+380674481154" class="banner__phone">+38 (067) 448 11 54</a>
+                </div>
+                <!-- end banner -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end layout -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>
