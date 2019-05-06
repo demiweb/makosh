@@ -66,7 +66,17 @@
             <h3 class="h3">дані клієнта по полю</h3>
           </div>
           {% set pdfBtnHidden = true %}
-          {% include "partials/_farmer-tables.html" %}
+          {% for j in i.clientItems %}
+          <!-- begin accordion-item -->
+          <div class="accordion-item">
+            <a href="#" class="accordion-item__title js-accordion-title{% if i.active %} is-active{% endif %}">{{ j.title }}</a>
+
+            <div class="accordion-item__content js-accordion-content{% if i.active %} is-active{% endif %}">
+              {% include "partials/_farmer-tables.html" %}
+            </div>
+          </div>
+          <!-- end accordion-item -->
+          {% endfor %}          
         </div>
       </div>
   </div>

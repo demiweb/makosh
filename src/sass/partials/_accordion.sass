@@ -8,10 +8,14 @@
     color: #292929
     +light
     padding: 10px 15px
+    padding-right: 30px
     border: 1px solid  $c-gray
     background-color: #f7f7f7
     display: block
     position: relative
+    +text-overflow
+    +md
+      font-size: 16px
     +before
       position: absolute
       display: inline-block
@@ -25,6 +29,8 @@
       fill: #dadada
       font-size: 14px
       margin-right: 15px
+      +sm
+        margin-right: 5px
     &.is-active
       background-color: $c-accent
       color: #fff
@@ -35,14 +41,28 @@
     display: none
     padding-top: 30px
     padding-bottom: 30px
+    +lg
+      padding-top: 20px
+      padding-bottom: 20px
 
   &--lg
     #{$this}__content-in
       display: flex
       padding-left: 30px
       padding-right: 30px
+      +lg
+        padding-left: 0
+        padding-right: 0
+      +md
+        display: block
     #{$this}__left
       width: percentage(355/1330)
+      +md
+        width: auto
+        margin-bottom: 20px
     #{$this}__right
       width: percentage(975/1330)
       padding-left: 40px
+      +md
+        width: auto
+        padding-left: 0

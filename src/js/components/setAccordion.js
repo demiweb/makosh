@@ -22,8 +22,8 @@ class Accordion {
       ? $wrap.find('.'+Accordion.classNames.title+':not([data-accordion-title="'+name+'"])')
       : $wrap.find('.'+Accordion.classNames.title).not(e.currentTarget);
 
-    $itemsElse.removeClass(ACTIVE);
-    $titlesElse.removeClass(ACTIVE);
+    // $itemsElse.removeClass(ACTIVE);
+    // $titlesElse.removeClass(ACTIVE);
 
     $(e.currentTarget).toggleClass(ACTIVE);
     $item.toggleClass(ACTIVE);
@@ -44,7 +44,7 @@ Accordion.classNames = {
 export default function setAccordion() {
   const accordion = new Accordion();
   accordion.onToggle = (title, $item, $itemsElse, $titlesElse) => {
-    $itemsElse.slideUp();
+    // $itemsElse.slideUp();
     $item.slideToggle();
   };
   accordion.init();

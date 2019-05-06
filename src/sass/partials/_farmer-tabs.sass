@@ -1,8 +1,14 @@
 .farmer-tabs
-  padding-top: 20px
+  // padding-top: 20px
   &__tabs
     padding-left: 147px
     margin-top: -70px
+    +lg
+      margin-top: -59px
+    +md
+      margin-top: -150px
+    +xs
+      padding-left: 0
   &__tab
     display: inline-block
     vertical-align: top
@@ -12,6 +18,20 @@
     padding: 14px 20px
     color: #fff
     background-color: $c-text
+    +lg
+      padding: 10px 15px
+      font-size: 14px
+    +md
+      width: 100%      
+      &:not(:last-child)
+        margin-bottom: 5px
+      &.is-active
+        border: 1px solid  $c-gray
+    +xs
+      padding: 10px
+    +r(319)
+      +text-overflow
+      max-width: 290px
     &.is-active
       background-color: #fff
       color: #000
@@ -38,6 +58,11 @@
     padding-bottom: 30px
     border-bottom: 1px solid  $c-gray
     margin-bottom: 25px
+    +md
+      display: block
+      .select, .input
+        width: 100%
+        margin-bottom: 10px
     .select, .input
       flex-grow: 1
       &:not(:last-child)
@@ -53,5 +78,9 @@
     vertical-align: top
     width: 46%
     margin-bottom: 10px
+    +xs
+      width: 100%
     &:nth-child(odd)
       margin-right: 8%
+      +xs
+        margin-right: 0

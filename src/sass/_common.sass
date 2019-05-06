@@ -44,8 +44,14 @@ body
   padding-top: 62px
   +cover
   background-position: 50% 0
+  +md
+    padding-top: 147px
   &__inner
     background-color: #fff
+    padding-top: 20px
+    padding-bottom: 20px
+    +md
+      border-top: 1px solid $c-gray
 
   
 .btn
@@ -63,8 +69,18 @@ body
     fill: currentColor
     font-size: 24px
     margin-left: 10px
+    transition: fill .3s
   &--full
     min-width: 0
+  &--log
+    +md
+      font-size: 0
+      color: transparent
+      padding: 0
+      background-color: transparent
+      .icon
+        font-size: 32px
+        fill: $c-accent
 
 .link
   +reg
