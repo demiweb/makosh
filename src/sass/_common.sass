@@ -44,14 +44,20 @@ body
   padding-top: 62px
   +cover
   background-position: 50% 0
-  +md
-    padding-top: 147px
+  // +md
+  //   padding-top: 147px
   &__inner
     background-color: #fff
     padding-top: 20px
     padding-bottom: 20px
     +md
       border-top: 1px solid $c-gray
+
+  &--tabs
+    +md
+      padding-top: 147px
+  &--page
+    padding-top: 0
 
   
 .btn
@@ -81,6 +87,8 @@ body
       .icon
         font-size: 32px
         fill: $c-accent
+  &--square
+    border-radius: 0
 
 .link
   +reg

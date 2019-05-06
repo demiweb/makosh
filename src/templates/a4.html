@@ -1,0 +1,26 @@
+---
+title: a4
+bannerBottom: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="layout layout--page">
+  <div class="layout__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="farmer-meta">
+            <div class="farmer-meta__block is-last">
+              {% include "partials/_farmer-tables.html" %}
+            </div>
+            <div class="farmer-meta__block is-last">
+              {% include "partials/_banner.html" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

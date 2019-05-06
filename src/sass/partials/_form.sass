@@ -217,4 +217,36 @@
         left: 15px
         font-size: 16px
         pointer-events: none
-    
+
+.search
+  position: relative
+  input
+    width: 100%
+    height: 41px
+    border: 1px solid  $c-accent
+    color: $c-text-100
+    font-size: 24px
+    padding: 5px 14px
+    padding-right: 230px
+    +light
+    +md
+      font-size: 21px
+    +sm
+      font-size: 18px
+      padding-left: 10px
+      padding-right: 10px
+      margin-bottom: 10px
+    +xs
+      font-size: 16px
+    +placeholder
+      font-family: inherit
+      color: inherit
+      font-size: inherit
+  .btn
+    position: absolute
+    top: 0
+    right: 0
+    +sm
+      position: static
+      width: 100%
+
