@@ -1,4 +1,4 @@
-import Select from '../lib/customSelect';
+import Select from 'customSelect';
 
 export default function setSelects() {
   const $selects = $('.js-select');
@@ -11,6 +11,8 @@ export default function setSelects() {
   panelInputWrap.innerHTML = '<svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>';
   panelInputWrap.appendChild(panelInput);
 
+
+  // =========== options ===========
   const options = {
     with_input: {
       panelItem: {
@@ -19,6 +21,7 @@ export default function setSelects() {
       }
     }
   };
+  // =========== options ===========
 
   $selects.each((i, selectEl) => {
     const type = selectEl.getAttribute('data-type');
@@ -60,5 +63,10 @@ export default function setSelects() {
         }
       });
     });
+
+    // set scrollbar
+    const $wrap = $(selectEl).closest('.custom-select');
+    const $scrollContainer = $wrap.find('.custom-select__options').length > 0 ? $wrap.find('.custom-select__options') : $wrap.find('.custom-select__panel');
+    $scrollContainer.addClass('js-scrollbar');
   });
 };

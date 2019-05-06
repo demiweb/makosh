@@ -1,0 +1,50 @@
+.table
+  +light
+  font-size: 16px
+  color: $c-text-100
+  th, td
+    text-align: center
+    vertical-align: middle
+    padding-top: 10px
+    padding-bottom: 10px
+    padding-left: 15px
+    padding-right: 15px
+    border: 1px solid  $c-gray
+    img
+      max-width: 100%
+      margin-right: 40px
+    div
+      display: flex
+      align-items: center
+      justify-content: center
+    a
+      color: $c-accent
+      text-decoration: underline
+  th
+    font-weight: 400
+    +bold
+    background-color: #fbfbfb    
+
+  &--sm
+    th
+      +light
+      width: 10%
+      &:first-child
+        text-align: center
+    td
+      text-align: center      
+
+  &--lg
+    th
+      &:nth-child(1)
+        width: percentage(480/930)
+        text-align: left
+      &:nth-child(2)
+        width: percentage(150/930)
+      &:nth-child(3)
+        width: percentage(150/930)
+      &:nth-child(4)
+        width: percentage(150/930)
+    td      
+      &:first-child
+        text-align: left

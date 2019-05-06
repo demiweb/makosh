@@ -1,0 +1,21 @@
+{%set
+history = [
+  { title: 'Поле №28 з соєю' },
+  { title: 'Поле з соняшником 25 га' },
+  { title: 'Рапс поле 5 га 2018 рік' }
+]
+%}
+
+<div class="farmer-tabs__item js-tabs-item" data-tab="history">
+  <!-- begin farmer-meta -->
+  <div class="farmer-meta">
+    <!-- begin accordion -->
+    <div class="accordion js-accordion">
+      {% for i in history %}
+      {% include "partials/_accordion-item-farmer.html" %}
+      {% endfor %}
+    </div>
+    <!-- end accordion -->
+  </div>
+  <!-- end farmer-meta -->
+</div>

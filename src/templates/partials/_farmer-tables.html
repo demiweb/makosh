@@ -1,0 +1,125 @@
+{%set
+gruntTable = [
+  {
+    cols: [
+      { title: 'N' },
+      { title: 'P2O5' },
+      { title: 'K2O' },
+      { title: 'Ca' },
+      { title: 'S' },
+      { title: 'Mg' },
+      { title: 'B' },
+      { title: 'Z' },
+      { title: 'Cu' },
+      { title: 'Mn' }
+    ]
+  },
+  {
+    cols: [
+      { text: '90' },
+      { text: '179' },
+      { text: '105' },
+      { text: '6,64' },
+      { text: '0' },
+      { text: '0.77' },
+      { text: '0' },
+      { text: '0' },
+      { text: '0' },
+      { text: '0' }
+    ]
+  }
+]
+%}
+
+{%set
+normTable = [
+  {
+    cols: [
+      { title: 'Добриво' },
+      { title: 'Період' },
+      { title: 'Норма внесення на 1 га' },
+      { title: 'Загальна кількість, т' }
+    ]
+  },
+  {
+    cols: [
+      { text: '<div><img src="img/makosh_magnezowy_16_17_new_2.png" width="66" height="93" alt=""> <a href="#">Makosh Magnezowy+micro (Mn, Cu)</a></div>' },
+      { text: 'перед посівом' },
+      { text: '140.62' },
+      { text: '14' }
+    ]
+  },
+  {
+    cols: [
+      { text: '<div><img src="img/makosh_magnezowy_16_17_new_2.png" width="66" height="93" alt=""> <a href="#">Makosh Magnezowy+micro (Mn, Cu)</a></div>' },
+      { text: 'перед посівом' },
+      { text: '140.62' },
+      { text: '14' }
+    ]
+  }
+]
+%}
+
+<div class="farmer-meta__form-top">
+        {{ mixins.input(
+          value = 'Соя'
+        ) }}
+        {{ mixins.input(
+          value = 'Планова врожайність (т/га) :   5'
+        ) }}
+        {{ mixins.input(
+          value = 'Площа поля (га) :   100'
+        ) }}
+      </div>
+
+      <div class="farmer-meta__block">
+        <div class="farmer-meta__title">
+          <h3 class="h3">показники аналізу грунту, мг/100 гр грунту</h3>
+        </div>
+
+        <!-- begin table -->
+        <div class="table table--sm">
+          <table>
+            {% for i in gruntTable %}
+            <tr>
+              {% for j in i.cols %}
+              {% if j.title %}
+              <th>{{ j.title }}</th>
+              {% elseif j.text %}
+              <td>{{ j.text }}</td>
+              {% endif %}              
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+        <!-- end table -->
+      </div>
+
+      <div class="farmer-meta__block is-last">
+        <div class="farmer-meta__title">
+          <h3 class="h3">Рекомендована норма внесення добрив</h3>
+        </div>
+
+        <!-- begin table -->
+        <div class="table table--lg">
+          <table>
+            {% for i in normTable %}
+            <tr>
+              {% for j in i.cols %}
+              {% if j.title %}
+              <th>{{ j.title }}</th>
+              {% elseif j.text %}
+              <td>{{ j.text | safe }}</td>
+              {% endif %}
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+        <!-- end table -->
+      </div>
+
+      <div class="farmer-meta__btn-center">
+        <button class="btn">Зберегти у форматі PDF</button>
+      </div>

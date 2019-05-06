@@ -1,0 +1,33 @@
+.accordion
+  &__title
+
+.accordion-item
+  &__title
+    font-size: 18px
+    color: #292929
+    +light
+    padding: 10px 15px
+    border: 1px solid  $c-gray
+    background-color: #f7f7f7
+    display: block
+    position: relative
+    +before
+      position: absolute
+      display: inline-block
+      pointer-events: none
+      +icon-arrow(12, 12, 2, #d0d0d0, -45)
+      top: 50%
+      right: 15px
+      transform: translate(0, -50%) rotate(-45deg)
+      transition: transform .3s
+
+    &.is-active
+      background-color: $c-accent
+      color: #fff
+      +before
+        +icon-arrow(12, 12, 2, #fff, -225)
+        transform: translate(0, -50%) rotate(-225deg)
+  &__content
+    display: none
+    padding-top: 30px
+    padding-bottom: 30px

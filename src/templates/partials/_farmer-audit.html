@@ -1,0 +1,85 @@
+{%set
+inputs = [
+  { label: 'N' },
+  { label: 'P205' },
+  { label: 'K2O' },
+  { label: 'Ca' },
+  { label: 'S' },
+  { label: 'Mg' },
+  { label: 'B' },
+  { label: 'Zn' },
+  { label: 'Cu' },
+  { label: 'Mn' }
+]
+%}
+
+<div class="farmer-tabs__item js-tabs-item is-active" data-tab="audit">
+  <!-- begin farmer-meta -->
+  <div class="farmer-meta">
+    <div class="farmer-meta__title">
+      <h3 class="h3">Ваші дані по полю</h3>
+    </div>
+
+    <div class="farmer-meta__form">
+      <form>
+        <div class="farmer-meta__form-top">
+          {{ mixins.select(
+            placeholder = 'Оберіть культуру',
+            options = [
+            { option: 'культура1' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура2' },
+            { option: 'культура3' }
+            ]
+            ) }}
+            {{ mixins.input(
+              placeholder = 'Введіть планову врожайність (т/га) :'                        
+              ) }}
+              {{ mixins.input(
+                placeholder = 'Введіть площу поля (га) :'                        
+                ) }}
+              </div>
+
+              <div class="farmer-meta__form-bottom">
+                <div class="farmer-meta__title">
+                  <h3 class="h3">введіть показники аналізу грунту, мг/100 гр грунту</h3>
+                </div>
+
+                <!-- begin farmer-inputs -->
+                <div class="farmer-inputs">
+                  {% for i in inputs %}
+                  <!-- begin input -->
+                  <div class="input input--with-label">
+                    <label>{{ i.label }}</label>
+                    <input type="text">
+                  </div>
+                  <!-- end input -->
+                  {% endfor %}
+                </div>
+                <!-- end farmer-inputs -->
+
+                <div class="farmer-meta__btn">
+                  <button class="btn">Зберегти дані</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end farmer-meta -->
+        </div>
+     

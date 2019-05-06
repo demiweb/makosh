@@ -1,7 +1,8 @@
 .farmer-tabs
-  margin-top: -50px
+  padding-top: 20px
   &__tabs
     padding-left: 147px
+    margin-top: -70px
   &__tab
     display: inline-block
     vertical-align: top
@@ -15,11 +16,22 @@
       background-color: #fff
       color: #000
   &__content
-    padding-top: 20px
+  &__item
+    display: none
+    &.is-active
+      display: block
+    
 
 .farmer-meta
   &__title
     margin-bottom: 20px
+  &__block
+    padding-bottom: 30px
+    border-bottom: 1px solid  $c-gray
+    margin-bottom: 25px
+    &.is-last
+      border-bottom: 0
+      padding-bottom: 0
   &__form-top
     display: flex
     justify-content: space-between
@@ -30,6 +42,8 @@
       flex-grow: 1
       &:not(:last-child)
         margin-right: 12px
+  &__btn-center
+    text-align: center
 
 .farmer-inputs
   font-size: 0
@@ -37,4 +51,7 @@
   .input
     // display: inline-block
     vertical-align: top
-    width: 50%
+    width: 46%
+    margin-bottom: 10px
+    &:nth-child(odd)
+      margin-right: 8%
