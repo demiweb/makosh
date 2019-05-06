@@ -55,6 +55,7 @@
   &__form-top
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     padding-bottom: 30px
     border-bottom: 1px solid  $c-gray
     margin-bottom: 25px
@@ -67,6 +68,9 @@
       flex-grow: 1
       &:not(:last-child)
         margin-right: 12px
+      &--full
+        margin-right: 0 !important
+        margin-bottom: 10px
   &__btn-center
     text-align: center
   &__search

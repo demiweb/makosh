@@ -23,6 +23,10 @@ inputs = [
     <div class="farmer-meta__form">
       <form>
         <div class="farmer-meta__form-top">
+          {{ mixins.input(
+            mod = 'input--full',
+            placeholder = 'Введіть назву поля'                        
+          ) }}
           {{ mixins.select(
             placeholder = 'Оберіть культуру',
             options = [

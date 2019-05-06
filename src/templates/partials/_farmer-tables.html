@@ -61,6 +61,12 @@ normTable = [
 %}
 
 <div class="farmer-meta__form-top">
+        {% if fieldName %}
+        {{ mixins.input(
+          mod = 'input--full',
+          value = 'Поле №28 з соєю'
+        ) }}
+        {% endif %}
         {{ mixins.input(
           value = 'Соя'
         ) }}
