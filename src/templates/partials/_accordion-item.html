@@ -1,0 +1,76 @@
+{% if itemFarmer %}
+
+<!-- begin accordion-item -->
+<div class="accordion-item">
+  <a href="#" class="accordion-item__title js-accordion-title{% if i.active %} is-active{% endif %}">{{ i.title }}</a>
+
+  <div class="accordion-item__content js-accordion-content{% if i.active %} is-active{% endif %}">
+    {% include "partials/_farmer-tables.html" %}
+  </div>
+</div>
+<!-- end accordion-item -->
+
+{% elseif itemManager %}
+
+<!-- begin accordion-item -->
+<div class="accordion-item accordion-item--lg">
+  <a href="#" class="accordion-item__title js-accordion-title{% if i.active %} is-active{% endif %}">{{ mixins.icon('user') }}{{ i.title }}</a>
+
+  <div class="accordion-item__content js-accordion-content{% if i.active %} is-active{% endif %}">
+    <div class="accordion-item__content-in">
+      <div class="accordion-item__left">
+        <!-- begin form -->
+        <div class="form form--in">
+          <div class="form__field">
+            {{ mixins.input(
+              mod = 'input--cabinet',
+              value = 'Сандюк Олександра Ігорівна',
+              inputIcon = 'user'
+              ) }}
+            </div>
+            <div class="form__field">
+            {{ mixins.input(
+              mod = 'input--cabinet',
+              type = 'tel',
+              value = '+380978876000',
+              inputIcon = 'call'
+              ) }}
+            </div>
+            <div class="form__field">
+            {{ mixins.input(
+              mod = 'input--cabinet',
+              type = 'email',
+              value = 'test@demiweb.pro',
+              inputIcon = 'envelope'
+              ) }}
+            </div>
+            <div class="form__field">
+            {{ mixins.input(
+              mod = 'input--cabinet',
+              value = 'Вінницька область'
+              ) }}
+            </div>
+            <div class="form__field">
+            {{ mixins.input(
+              mod = 'input--cabinet',
+              value = 'Ленінський район'
+              ) }}
+            </div>
+            
+          </div>
+          <!-- end form -->
+        </div>
+
+        <div class="accordion-item__right">
+          <div class="farmer-meta__title">
+            <h3 class="h3">дані клієнта по полю</h3>
+          </div>
+          {% set pdfBtnHidden = true %}
+          {% include "partials/_farmer-tables.html" %}
+        </div>
+      </div>
+  </div>
+</div>
+<!-- end accordion-item -->
+
+{% endif %}

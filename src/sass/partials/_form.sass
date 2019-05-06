@@ -56,6 +56,11 @@
       background-size: contain
       width: 135px
       height: 149px
+  &--in
+    padding: 0
+    max-width: none
+    +xs
+      padding: 0
 
 .input
   position: relative
@@ -90,6 +95,17 @@
     justify-content: space-between
     label
       width: 90px
+  &--cabinet
+    input
+      font-size: 14px
+      color: #292929
+      +light
+      +placeholder
+        +light
+        font-size: 14px
+        color: inherit
+    .icon
+      font-size: 14px
 
       
 .select

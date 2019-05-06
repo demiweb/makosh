@@ -11,8 +11,9 @@ history = [
   <div class="farmer-meta">
     <!-- begin accordion -->
     <div class="accordion js-accordion">
+      {% set itemFarmer = true %}
       {% for i in history %}
-      {% include "partials/_accordion-item-farmer.html" %}
+      {% include "partials/_accordion-item.html" %}
       {% endfor %}
     </div>
     <!-- end accordion -->

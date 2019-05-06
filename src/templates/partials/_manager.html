@@ -1,0 +1,38 @@
+{%set
+clients = [
+  { title: 'Сандюк Олександра Ігорівна' },
+  { title: 'Сандюк Олександра Ігорівна' },
+  { title: 'Сандюк Олександра Ігорівна' },
+  { title: 'Сандюк Олександра Ігорівна' }
+]
+%}
+
+<!-- begin layout -->
+<section class="layout" style="background-image: url('img/bg-manager.jpg');">
+  <div class="layout__inner">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="farmer-meta">
+            <div class="farmer-meta__title">
+              <h3 class="h3">Ваші фермери</h3>
+            </div>
+
+            <!-- begin accordion -->
+            <div class="accordion js-accordion">
+              {% set itemManager = true %}
+              {% for i in clients %}
+              {% include "partials/_accordion-item.html" %}
+              {% endfor %}
+            </div>
+            <!-- end accordion -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+<!-- end layout -->
