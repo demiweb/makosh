@@ -102,6 +102,12 @@ normTable = [
         <!-- end table -->
       </div>
 
+      {% if banner %}
+      <div class="farmer-meta__block">
+        {% include "partials/_banner.html" %}
+      </div>
+      {% endif %}
+
       <div class="farmer-meta__block is-last">
         <div class="farmer-meta__title">
           <h3 class="h3">Рекомендована норма внесення добрив</h3>

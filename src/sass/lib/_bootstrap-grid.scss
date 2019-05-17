@@ -53,6 +53,13 @@ html {
   }
 }
 
+@media print and (min-width: 576px) {
+  .container {
+    max-width: 900px !important;
+    width: 900px !important;
+  }
+}
+
 .container-fluid {
   width: 100%;
   padding-right: 15px;
